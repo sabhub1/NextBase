@@ -1,4 +1,5 @@
 if _G.__NextBaseCleanup then pcall(_G.__NextBaseCleanup) end
+local CoreGui = game:GetService("CoreGui")
 local Plots = workspace:WaitForChild("Plots")
 local BASE_POSITIONS = {
 	Vector3.new(-342.439, 10.399, 113.107),
@@ -32,7 +33,7 @@ anchor.Name = "__NextBaseAnchor"
 anchor.Anchored, anchor.CanCollide, anchor.CanQuery, anchor.CanTouch = true, false, false, false
 anchor.Transparency = 1
 anchor.Size = Vector3.new(1, 1, 1)
-anchor.Parent = workspace
+anchor.Parent = CoreGui
 local bb = Instance.new("BillboardGui")
 bb.Name = "NextBaseBillboard"
 bb.Adornee = anchor
@@ -51,7 +52,7 @@ top.Size = UDim2.fromScale(0.95, 0.50)
 top.Font = Enum.Font.GothamBlack
 top.Text = ARROW .. "  NEXT  " .. ARROW
 top.TextScaled = true
-top.TextColor3 = Color3.fromRGB(46, 230, 92)
+top.TextColor3 = Color3.fromRGB(255, 60, 60)
 top.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
 top.TextStrokeTransparency = 0
 local bottom = Instance.new("TextLabel", bb)
